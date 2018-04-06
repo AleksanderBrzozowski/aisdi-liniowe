@@ -165,7 +165,7 @@ namespace aisdi {
 
         void erase(const const_iterator &position) {
             if (position == end()) {
-                throw std::out_of_range("Iterator is out of range (erase)");
+                throw std::out_of_range("Iterator is out of range");
             }
             const auto nodeToDelete = position.current_node;
 
@@ -282,13 +282,13 @@ namespace aisdi {
 
         void checkIsNotEnd() const {
             if (*this == list.end()) {
-                throw std::out_of_range("Iterator is out of range (not end)");
+                throw std::out_of_range("Iterator is out of range");
             }
         }
 
         void checkIsNotBegin() const {
             if (*this == list.begin()) {
-                throw std::out_of_range("Iterator is out of range (nto begin)");
+                throw std::out_of_range("Iterator is out of range");
             }
         };
 

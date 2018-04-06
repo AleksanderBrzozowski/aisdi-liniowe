@@ -266,13 +266,13 @@ namespace aisdi {
 
         void checkIsNotEnd() const {
             if (*this == vector.end()) {
-                throw std::out_of_range("Iterator is out of range (nto end vec)");
+                throw std::out_of_range("Iterator is out of range");
             }
         }
 
         void checkIsNotBegin() const {
             if (*this == vector.begin()) {
-                throw std::out_of_range("Iterator is out of range (nto beg vec)");
+                throw std::out_of_range("Iterator is out of range");
             }
         };
     };
