@@ -932,6 +932,17 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyCollection_WhenErasingRange_ThenSizeI
   BOOST_CHECK_EQUAL(collection.getSize(), 2);
 }
 
+BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyCollection_WhenPrepend_ThenLastElementIsEqualToFirst,
+                              T,
+                              TestedTypes)
+{
+  LinearCollection<T> collection;
+
+  collection.prepend(1);
+
+  BOOST_CHECK_EQUAL(*(collection.begin()), *(--collection.end()));
+}
+
 // ConstIterator is tested via Iterator methods.
 // If Iterator methods are to be changed, then new ConstIterator tests are required.
 
